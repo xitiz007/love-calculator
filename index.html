@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>प्रेम क्यालकुलेटर</title>
+    <link rel="icon" href="images/heart.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="title">
+                प्रेम क्यालकुलेटर
+                <img src="images/love.png" alt="love" width="35px" height="35px">
+            </h1>
+            <h6 id="sub-title">
+                अनलाइन प्रेम प्रतिशत गणना गर्नुहोस्
+            </h6>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 mb-4">
+                    <div class="box">
+                        <form id="loveform">
+                            <div class="user-box">
+                                <h6 class="box-title">
+                                    तपाइँको नाम
+                                </h6>
+                                <input type="text" required placeholder="तपाइँको नाम लेख्नुहोस्" name="username">
+                                <div class="gender-section">
+                                    <input type="radio" id="male" name="gender1" value="male" required>
+                                    <label for="male">पुरुष</label>
+                                    <br>
+                                    <input type="radio" id="female" name="gender1" value="female">
+                                    <label for="female">महिला</label>
+                                </div>
+                            </div>
+        
+                            <div class="partner-box">
+                                <h6 class="box-title">
+                                    पार्टनरको नाम
+                                </h6>
+                                <input type="text" required placeholder="पार्टनरको नाम लेख्नुहोस्" name="partnername">
+                                <div class="gender-section">
+                                    <input type="radio" id="male" name="gender2" value="male" required>
+                                    <label for="male">पुरुष</label>
+                                    <br>
+                                    <input type="radio" id="female" name="gender2" value="female">
+                                    <label for="female">महिला</label>
+                                </div>
+                            </div>
+                            <div class="calculate-button text-center">
+                                <input type="submit" class="btn btn-danger" value="प्रेम प्रतिशत गणना गर्नुहोस्">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="result-box justify-content-center">
+                        <div>
+                            <h6 style="font-weight: 600; letter-spacing: 1.5px;" class="text-center">दुई बिचको प्रेम प्रतिशत</h6>
+                            <h6 style="font-weight: 500; color: #FF0000;" id="couple-name" class="text-center"></h6>
+                            <div class="canvas-wrap">
+                                <canvas id="canvas" width="250px" height="250px"></canvas>
+                                <span id="procent"></span>
+                            </div>
+                            <div class="text-center">
+                                <a href="https://xitiz007.github.io/love-calculator/">
+                                    पुनःहिसाब गर्नुहोस्
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5" style="padding: 15px;">
+                    <div class="description">
+                        <div class="pandit-image mr-2" style="display: inline-block;">
+                            <img src="images/pandit.jpg" alt="pandit jee" class="img-fluid rounded-circle" width="110px">
+                        </div>
+                        <div class="pandit-detail text-center" style="display: inline-block;">
+                            <h6 style="font-weight: 500;">नमस्कार म</h6>
+                            <h6 style="font-weight: 600; letter-spacing: 2px;">बिबेक पण्डित</h6>
+                            <h6 style="font-weight: 500; font-size: 14px;" class="text-muted">ज्योतिष विज्ञ</h6>
+                        </div>
+                    </div>
+                    <div class="why mt-3 mb-2 text-center">
+                        <h6 style="font-weight: 500; letter-spacing: 2px;">
+                            किन हाम्रो प्रेम क्यालकुलेटर प्रयोग गर्ने ?
+                        </h6>
+                        <h6 class="text-muted" style="line-height: 25px;">
+                            म लगाएत अरु ज्योतिष विज्ञ मिलेर हामीले प्रेम प्रतिशत निकाल्ने algorithm बनाएका छौ र आजको दिन सम्म तेही algorithm प्रयोगमा छ र धेरै मानिसहरुको प्रेम प्रतिशत मिलेको देखिनछ ।
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h6 class="text-center" style="letter-spacing: 1.5px;">
+                "मर्न को लागि धेरै कारण हरु छन् तर बाचनको लागि मात्र तिमि हौ ।"
+            </h6>
+            <h6 class="text-muted text-center">
+                बिबेक पण्डित
+            </h6>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>
